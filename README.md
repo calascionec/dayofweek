@@ -1,8 +1,8 @@
-### <Title>
-### By Rick Hills
-### Date: <date>
+### Days of The Week
+### By Rick Hills and Christopher Calascione
+### Date: August 13, 2015
 ### Description
-Put description here... 
+Will take a date and return the day of the week as a string.
 
 ### Setup instructions
 1. Clone github directory
@@ -16,7 +16,7 @@ PHP, Silex, Twig, Bootstrap
 
 ### Legal
 
-Copyright (c) 2015 Rick Hills
+Copyright (c) 2015 Rick Hills and Christopher Calascione
 
 This software is licensed under the MIT license.
 

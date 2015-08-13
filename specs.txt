@@ -1,10 +1,15 @@
-User input " " "0"
-User input "a" "1"
-User input "d" "2"
-User input "b" "3"
-User input "f" "4"
-User input "k" "5"
-User input "j" "8"
-User input "q" "10"
-User input "!" "" "0"
-User input "Scrabble!" "14"
+Return day of week for today
+    "08/13/15"  "Thursday"
+
+
+Return invalid input for a non date
+
+    "bob"   "Invalid Date"
+
+Return day of week for past date
+
+    "01/01/01"  "Monday"
+
+Return day of week for future date
+
+    "01/01/3000"    "Wednesday"  
