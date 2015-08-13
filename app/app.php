@@ -1,7 +1,7 @@
 <?php
     // Dependencies
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/ScrabbleScore.php";
+    require_once __DIR__."/../src/DOW.php";
 
     // For BSOD and other serious error debugging uncomment these lines:
     // use Symfony\Componet\Debug\Debug;
@@ -11,7 +11,7 @@
     $app = new Silex\Application();
 
     // Uncomment line below for debug messages
-    // app['debug'] = true;
+    $app['debug'] = true;
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
         'twig.path' => __DIR__.'/../views'
@@ -26,16 +26,14 @@
 
     // // Route to display scrabble word and score
     $app->get("/results", function() use ($app) {
-        $my_scrabble_score = new ScrabbleScore();
-        $word = $_GET["string"];
-        $results = $my_scrabble_score->calculateScore($word);
+        $my_DOW = new DOW();
+        $date = $_GET["date"];
+        echo $date; 
+        $results = $my_DOW->calculateDOW($date);
 
-        $output_word = $results[0];
-        $score = $results[1];
 
-        return $app['twig']->render('results.html.twig', array('word' => $output_word, 'score' => $score));
+        return $app['twig']->render('results.html.twig', array('date' => $date, 'results' => $results ));
     });
-
 
     return $app;
 

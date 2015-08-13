@@ -6,10 +6,14 @@ Return invalid input for a non date
 
     "bob"   "Invalid Date"
 
+Return invalid input for 0 in month day or year
+
+    "0/1/2011"     "Invalid Date"
+
 Return day of week for past date
 
     "01/01/01"  "Monday"
 
 Return day of week for future date
 
-    "01/01/3000"    "Wednesday"  
+    "01/01/3000"    "Wednesday"
